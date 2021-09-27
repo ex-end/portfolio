@@ -1,9 +1,8 @@
 var updated = [//тут указываем скрипты которые не должны жестко кешироваться
-"https://soltyk.ru/broadcasts/1959750457-widget-3.js",
-"https://soltyk.ru/sw.js"//указал сам скрипт service worker, чтобы не кешировался жестко в будущем. Проверил. Оффлайн режим работает без него в этом кеше.
+"https://ex-end.github.io/portfolio/sw.js"//указал сам скрипт service worker, чтобы не кешировался жестко в будущем. Проверил. Оффлайн режим работает без него в этом кеше.
 ];
 const version = "0.0.7";//тут может быть номер вашей версии
-const CACHE = "soltyk-cache" + version;//вместо soltyk - используйте свое уникальное название или доменное имя
+const CACHE = "portfolio-cache" + version;//вместо soltyk - используйте свое уникальное название или доменное имя
 self.addEventListener('install', function(event) {
 var indexPage = new Request('index.html');
 event.waitUntil(fetch(indexPage).then(function(response) {
