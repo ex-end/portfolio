@@ -22,19 +22,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
 <meta name="theme-color" content="#E6E6FA">
- <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -44,6 +32,17 @@ if ('serviceWorker' in navigator) {
         <link href="css/styles.css" rel="stylesheet" />
 	</head>
     <body id="page-top">
+	<script>
+if (navigator.serviceWorker.controller) {
+console.log('[PWA Builder] active service worker found, no need to register')
+} else {
+navigator.serviceWorker.register('sw.js', {
+scope: './'
+}).then(function(reg) {
+console.log('Service worker has been registered for scope:'+ reg.scope);
+});
+}
+</script>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
