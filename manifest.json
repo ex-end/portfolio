@@ -2,7 +2,7 @@
  "name": "Portfolio",
  "short_name": "Portfolio",
  "lang": "ru",
- "start_url": "/",
+ "start_url": "/portfolio",
  "display": "standalone",
  "prefer_related_applications": true,
  "theme_color": "#E6E6FA",
