@@ -4,6 +4,7 @@
  "lang": "ru",
  "start_url": "/",
  "display": "standalone",
+ "prefer_related_applications": true,
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
