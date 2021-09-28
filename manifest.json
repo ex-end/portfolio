@@ -1,6 +1,6 @@
 {
- "name": "Portfolio",
- "short_name": "Portfolio",
+ "name": "Test app",
+ "short_name": "Test app",
  "lang": "ru",
  "start_url": ".",
  "display": "standalone",
