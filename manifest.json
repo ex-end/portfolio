@@ -9,7 +9,7 @@
  "background_color": "#E6E6FA",
  "icons": [
   {
-   "src": "\/./assets/img/android-icon-512x512.png",
+   "src": "\/portfolio/assets/img/android-icon-512x512.png",
    "sizes": "512x512",
    "type": "image\/png",
    "purpose": "any maskable"
